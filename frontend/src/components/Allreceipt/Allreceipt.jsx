@@ -168,7 +168,7 @@ const Allreceipt = () => {
         const token = localStorage.getItem("token");
 
         const response = await fetch(
-          `http://localhost:3000/receipt/userallreceipts/${userId}`,
+          `https://receipt-5.onrender.com/receipt/userallreceipts/${userId}`,
           {
             method: "GET",
             headers: {
@@ -193,7 +193,7 @@ const Allreceipt = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch(`http://localhost:3000/receipt/${id}`, { // Use receipt _id
+      const res = await fetch(`https://receipt-5.onrender.com/receipt/${id}`, { // Use receipt _id
         method: "DELETE",
         headers: {
           'Authorization': `Bearer ${token}`, // Add auth header

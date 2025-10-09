@@ -2,7 +2,7 @@ const receiptRoutes = require('../Routes/receipt.routes');
 const authRoutes = require('../Routes/auth.routes')
 const express = require('express');
 const cookieParser = require("cookie-parser");
-
+const path = require('path')
 const cors = require('cors')
 const app = express();
 
@@ -16,5 +16,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/receipt', receiptRoutes);
 app.use('/user', authRoutes);
-
+app.use(express.static(path.join(__dirname, '../public')));
+app.get("*name",(req,res)=>{
+  res.sendFile(path.join(__dirname, '../public/index.html'))
+})
 module.exports = app;
