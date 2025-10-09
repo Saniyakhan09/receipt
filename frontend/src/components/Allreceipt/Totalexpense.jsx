@@ -270,7 +270,6 @@ const Totalexpense = () => {
 
   const navigate = useNavigate();
 
-  // ✅ Corrected: localStorage.getItem("userId") (it must be a string)
   const fetchData = async (type) => {
     const userId = localStorage.getItem("userId");
 
@@ -281,7 +280,7 @@ const Totalexpense = () => {
 
     try {
       const res = await fetch(`https://receipt-5.onrender.com/receipt/${type}/${userId}`, {
-        credentials: "include", // ✅ properly placed inside options
+        credentials: "include", 
       });
 
       const data = await res.json();
