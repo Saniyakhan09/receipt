@@ -279,7 +279,7 @@ const Totalexpense = () => {
     }
 
     try {
-      const res = await fetch(`https://receipt-6.onrender.com/receipt/${type}/${userId}`, {
+      const res = await fetch(`https://receipt-5.onrender.com/receipt/${type}/${userId}`, {
         credentials: "include", 
       });
 
