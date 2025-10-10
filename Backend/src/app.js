@@ -14,6 +14,7 @@ const corsOptions = {
 app.use(cors(corsOptions))
 app.use(express.json());
 app.use(cookieParser());
+
 app.use('/receipt', receiptRoutes);
 app.use('/user', authRoutes);
 app.use(express.static(path.join(__dirname, '../Public/dist')));
