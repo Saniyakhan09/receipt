@@ -11,7 +11,6 @@ const Allreceipt = () => {
     const [activeTab, setActiveTab] = useState("review");
   const [selectedImage, setSelectedImage] = useState(null);
     const navigate = useNavigate();
-console.log("Token:", token); //aded 
 
   useEffect(() => {
     const getAllReceipts = async () => {
@@ -20,7 +19,7 @@ console.log("Token:", token); //aded
         const token = localStorage.getItem("token");
 
         const response = await fetch(
-          `https://receipt-5.onrender.com/receipt/userallreceipts/${userId}`,
+          `https://receipt-6.onrender.com/receipt/userallreceipts/${userId}`,
           {
             method: "GET",
             headers: {
@@ -45,7 +44,7 @@ console.log("Token:", token); //aded
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch(`https://receipt-5.onrender.com/receipt/${id}`, { // Use receipt _id
+      const res = await fetch(`https://receipt-6.onrender.com/receipt/${id}`, { // Use receipt _id
         method: "DELETE",
         headers: {
           'Authorization': `Bearer ${token}`, // Add auth header
