@@ -1,7 +1,6 @@
 
 const express = require("express");
 const multer = require('multer');
-// const authMiddleware = require("../src/middleware/auth.middleware")                                                  
 const  {createReceipt,getReceipts,getuserreceipt,deleteReceipt,getPaid,getUnpaid,getPending}  = require("../controller/receipt.controller");
 const authMiddleware = require("../src/middleware/auth.middleware")
 const Routes = express.Router();
