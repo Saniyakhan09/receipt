@@ -7,7 +7,7 @@ const cors = require('cors')
 const app = express();
 
 const corsOptions = {
-  origin:"http://localhost:5173",
+ origin: ["http://localhost:5173", "https://receipt-5.onrender.com"],
   methods:"GET, POST, PUT, DELETE, HEAD",
   credentials: true
 }
