@@ -16,8 +16,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/receipt', receiptRoutes);
 app.use('/user', authRoutes);
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../Public/dist')));
 app.get(/.*/,(req,res)=>{
-  res.sendFile(path.join(__dirname, '../public/index.html'))
+  res.sendFile(path.join(__dirname, '../Public/dist/index.html'))
 })
 module.exports = app;
