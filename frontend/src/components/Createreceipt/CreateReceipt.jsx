@@ -44,7 +44,7 @@ const [file, setFile] = useState(null);
     formData.append('user', userId);
 
     try {
-      const response = await fetch('https://receipt-5.onrender.com/receipt/create', {
+      const response = await fetch('https://receipt-6.onrender.com/receipt/create', {
         method: 'POST',
         body: formData,
         headers: {
