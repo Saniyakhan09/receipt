@@ -11,7 +11,7 @@ const Allreceipt = () => {
     const [activeTab, setActiveTab] = useState("review");
   const [selectedImage, setSelectedImage] = useState(null);
     const navigate = useNavigate();
-
+console.log("Token:", token); //aded 
 
   useEffect(() => {
     const getAllReceipts = async () => {

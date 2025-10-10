@@ -9,7 +9,6 @@ const app = express();
 const corsOptions = {
  origin: "https://receipt-5.onrender.com",
   methods:"GET, POST, PUT, DELETE, HEAD",
-    allowedHeaders: ["Content-Type", "Authorization"], //changes made
   credentials: true
 }
 app.use(cors(corsOptions))
