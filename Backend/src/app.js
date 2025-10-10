@@ -7,7 +7,7 @@ const cors = require('cors')
 const app = express();
 
 const corsOptions = {
- origin: "https://receipt-6.onrender.com/",
+ origin: "https://receipt-5.onrender.com",
   methods:"GET, POST, PUT, DELETE, HEAD",
   credentials: true
 }

@@ -11,7 +11,7 @@ const navigate = useNavigate();
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://receipt-6.onrender.com/user/register", {
+      const res = await fetch("https://receipt-5.onrender.com/user/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -36,7 +36,7 @@ const navigate = useNavigate();
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://receipt-6.onrender.com/user/login", {
+      const res = await fetch("https://receipt-5.onrender.com/user/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
