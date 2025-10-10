@@ -30,8 +30,8 @@ const Totalexpense = () => {
 
       // ✅ Handle each type properly
       if (type === "paid") setPaid(data.totalPaid || 0);
-      if (type === "unpaid") setUnpaid(data.totalPaid || 0);
-      if (type === "pending") setPending(data.totalPaid || 0);
+      if (type === "unpaid") setUnpaid(data.totalUnpaid || 0);
+      if (type === "pending") setPending(data.totalPending || 0);
     } catch (err) {
       console.error("Error fetching data:", err);
     }

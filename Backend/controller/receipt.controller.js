@@ -106,7 +106,7 @@ async function getPending(req,res){
 
   const pending = await Receipt_Model.find({user: userId, status:"pending"});
   const total = pending.reduce((acc,receipt)=>acc + receipt.amount,0);
-    res.status(200).json({totalpending: total});
+    res.status(200).json({totalPending: total});
 
 }
 
