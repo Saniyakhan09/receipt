@@ -58,12 +58,11 @@ async function Register(req, res) {
       { expiresIn: "1d" }
     );
 
-    // 👇 Cookie set with proper options
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false,   // local development → false, production (https) → true
-      sameSite: "lax",
-      maxAge: 24 * 60 * 60 * 1000, // 1 day
+      secure: true,   
+      sameSite: "none",
+      maxAge: 24 * 60 * 60 * 1000, 
     });
 
     return res.status(201).json({ message: "User registered", token });
