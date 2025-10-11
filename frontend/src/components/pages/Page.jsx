@@ -9,8 +9,8 @@ const Page = () => {
   const navigate = useNavigate()
   return (
     <div className="page-container">
-      <h1>Welcome {username} </h1>
-      <p>Here's what you need to know today.</p>
+      <h1>Hey{username}! </h1>
+      <p>Here's what's new with your receipts today.</p>
       <div className="btn-group">
         <button 
           className="btn" 
@@ -20,7 +20,7 @@ const Page = () => {
         </button>
         <button 
           className="btn" 
-          onClick={() => navigate(`/AllReceipt`)}
+          onClick={() => navigate("/AllReceipt", { replace: true })}
         >
           VIEW ALL RECEIPTS
         </button>

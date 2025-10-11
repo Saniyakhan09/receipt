@@ -22,7 +22,7 @@ p {
 }
 
 .btn-group {
-  display: flex;
+  /* display: flex; */
   gap: 10px;
 }
 

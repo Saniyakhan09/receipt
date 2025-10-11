@@ -1,7 +1,3 @@
-
-
-
-
 import React, { useEffect, useState } from "react";
 import "./Allreceipt.css";
 import { useNavigate } from "react-router-dom";
@@ -11,7 +7,7 @@ const Allreceipt = () => {
     const [activeTab, setActiveTab] = useState("review");
   const [selectedImage, setSelectedImage] = useState(null);
     const navigate = useNavigate();
-
+ const [loading,setLoading]= useState([])
   useEffect(() => {
     const getAllReceipts = async () => {
       try {
@@ -62,6 +58,9 @@ const Allreceipt = () => {
     } catch (err) {
       console.error(err);
       alert("Something went wrong while deleting!");
+    }
+    finally{
+      setLoading(false)
     }
   };
 
