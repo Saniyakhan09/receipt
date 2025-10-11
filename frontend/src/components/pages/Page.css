@@ -45,14 +45,14 @@ p {
 
 
 @media (max-width: 600px) {
-  .button-group {
+  .btn-group {
     display: flex;
     flex-direction: column; 
     align-items: center;
     gap: 10px;
   }
 
-  .button-group button {
+  .btn-group btn {
     width: 80%; 
   }
 }
