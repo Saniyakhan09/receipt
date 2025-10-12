@@ -45,13 +45,12 @@ const Allreceipt = () => {
         headers: {
           'Authorization': `Bearer ${token}`, 
         },
-        credentials: "include", // If using cookies
+        credentials: "include", 
       });
 
       const data = await res.json();
       if (res.ok) {
         setReceipts((prev) => prev.filter((r) => r._id !== id));
-        // alert("Receipt deleted successfully");
       } else {
         alert("Error: " + data.message);
       }
@@ -85,7 +84,12 @@ const Allreceipt = () => {
       </div>
     <div className="receipt-section">
         <h3 className="section-title">Last 7 days</h3>
-         <ul className="receipts-list">
+         <div className="receipts-list">
+
+          {  receipts.lenght === 0?(
+            <p className="no-receipt-message">No receipts created yet</p>
+          ) :( 
+            <ul>
         {receipts.map((receipt) => (
             <li className="receipt-row" key={receipt._id}>
                <div className="receipt-thumb">
@@ -122,7 +126,8 @@ const Allreceipt = () => {
              </li>
            ))}
        </ul>
-
+)}
+</div>
          {selectedImage && (
            <div className="image-modal" onClick={() => setSelectedImage(null)}>
            <span className="close-btn">&times;</span>
