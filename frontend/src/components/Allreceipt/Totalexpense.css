@@ -61,7 +61,9 @@
   font-weight: 500;
   transition: 0.3s;
 }
-
+.expense-buttons button h2{
+  color: #432534;
+}
 .expense-buttons button.active {
   background: #432534;
   color: white;
