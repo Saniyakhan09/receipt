@@ -7,7 +7,7 @@ const Allreceipt = () => {
     const [activeTab, setActiveTab] = useState("review");
   const [selectedImage, setSelectedImage] = useState(null);
     const navigate = useNavigate();
- const [loading,setLoading]= useState([])
+ const [loading,setLoading]= useState(true)
   useEffect(() => {
     const getAllReceipts = async () => {
       try {
@@ -86,8 +86,10 @@ const Allreceipt = () => {
         <h3 className="section-title">Last 7 days</h3>
          <div className="receipts-list">
 
-          {receipts.length === 0 ?(
-            <p className="no-receipt-message">No receipts created yet</p>
+          {loading ? (
+          <p className="no-receipt-message">Loading your receipts...</p>
+        ): receipts.length === 0 ?(
+            <p className="no-receipt-message">No receipts created by you yet</p>
           ) :( 
             <ul>
         {receipts.map((receipt) => (
