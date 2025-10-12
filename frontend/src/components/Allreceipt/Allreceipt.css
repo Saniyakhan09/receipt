@@ -1,8 +1,8 @@
 .all-receipts-container {
   min-height: 100vh;
   background: #f8f9fb;
-  padding: 20px;
-  margin-top: 50px;
+  padding: 80px 20px;
+  /* margin-top: 50px; */
   font-family: Arial, sans-serif;
 }
 .all-receipts-container li p{

@@ -86,9 +86,7 @@ const Allreceipt = () => {
         <h3 className="section-title">Last 7 days</h3>
          <div className="receipts-list">
 
-          {loading ? (
-          <p className="no-receipt-message">Loading your receipts...</p>
-        ): receipts.length === 0 ?(
+          {receipts.length === 0 ?(
             <p className="no-receipt-message">No receipts created by you yet</p>
           ) :( 
             <ul>
