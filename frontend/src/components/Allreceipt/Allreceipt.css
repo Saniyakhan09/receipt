@@ -2,6 +2,7 @@
   min-height: 100vh;
   background: #f8f9fb;
   padding: 20px;
+  margin-top: 50px;
   font-family: Arial, sans-serif;
 }
 .all-receipts-container li p{
@@ -9,6 +10,7 @@
 }
 /* Tabs */
 .tabs {
+
   display: flex;
   border-bottom: 2px solid #ddd;
   margin-bottom: 20px;
