@@ -20,7 +20,7 @@ const Page = () => {
         </button>
         <button 
           className="btn" 
-          onClick={() => navigate("/AllReceipt", { replace: true })}
+          onClick={() => navigate("/AllReceipt")}
         >
           VIEW ALL RECEIPTS
         </button>

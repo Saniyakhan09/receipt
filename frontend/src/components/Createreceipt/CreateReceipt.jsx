@@ -142,7 +142,7 @@ const [file, setFile] = useState(null);
           </select>
         </div>
         <div  className='form-group'>
-          <label className='form-title'>Upload Image:</label>
+          <label className='form-title'>Upload Image</label>
           <input
             type="file"
             name="image"

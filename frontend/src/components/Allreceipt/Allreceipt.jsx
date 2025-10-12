@@ -40,10 +40,10 @@ const Allreceipt = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch(`https://receipt-5.onrender.com/receipt/${id}`, { // Use receipt _id
+      const res = await fetch(`https://receipt-5.onrender.com/receipt/${id}`, { 
         method: "DELETE",
         headers: {
-          'Authorization': `Bearer ${token}`, // Add auth header
+          'Authorization': `Bearer ${token}`, 
         },
         credentials: "include", // If using cookies
       });
