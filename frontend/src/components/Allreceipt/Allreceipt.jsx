@@ -28,7 +28,12 @@ const Allreceipt = () => {
 
         const data = await response.json();
         console.log("All Receipts:", data);
-        setReceipts(data);
+        if (Array.isArray(data)) {
+          setReceipts(data);
+        } else {
+          setReceipts([]);
+        }
+        // setReceipts(data);changes
       } catch (error) {
         console.error("Error fetching receipts:", error);
       }
@@ -86,7 +91,9 @@ const Allreceipt = () => {
         <h3 className="section-title">Last 7 days</h3>
          <div className="receipts-list">
 
-          {receipts.length === 0 ?(
+          {loading ? (
+          <p className="no-receipt-message">Loading your receipts...</p>
+        ) :receipts.length === 0 ?(
             <p className="no-receipt-message">No receipts created by you yet</p>
           ) :( 
             <ul>
