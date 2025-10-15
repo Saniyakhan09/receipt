@@ -52,21 +52,18 @@ async function getReceipts(req, res) {
 
 async function getuserreceipt(req, res) {
   try {
-    const { userId } = req.params; // Get userId from route parameter
+    const { userId } = req.params;
 
-    // Validate userId
     if (!ObjectId.isValid(userId)) {
       return res.status(400).json({ error: 'Invalid user ID' });
     }
 
-    // Fetch receipts for the specified userId
     const receipts = await Receipt_Model.find({ user: userId });
 
     if (!receipts || receipts.length === 0) {
       return res.status(404).json({ error: 'No receipts found for this user' });
     }
 
-    // Authorization check: Only the same user or an admin can access
     if (userId.toString() !== req.user._id.toString()) {
       return res.status(403).json({ error: 'Access denied' });
     }

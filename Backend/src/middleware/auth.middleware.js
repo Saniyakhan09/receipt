@@ -1,11 +1,9 @@
-
-
 const jwt = require('jsonwebtoken');
 const SECRET_KEY = process.env.JWT_SECRET || 'your-secret-key';
 
 const authMiddleware = async (req, res, next) => {
   try {
-    const token = req.cookies.token; // Read token from cookie
+    const token = req.cookies.token; 
     if (!token) {
       return res.status(401).json({ error: 'No token provided' });
     }

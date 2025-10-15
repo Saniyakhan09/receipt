@@ -1,10 +1,7 @@
-
-
 const UserModel = require('../Model/auth.module');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
-// ---------------- Register ----------------
 async function Register(req, res) {
   try {
     const { username, password } = req.body;
@@ -39,7 +36,6 @@ async function Register(req, res) {
   }
 }
 
-// ---------------- Login ----------------
 async function login(req, res) {
   try {
     const { username, password } = req.body;
@@ -60,7 +56,6 @@ async function login(req, res) {
       { expiresIn: "1d" }
     );
 
-    // 👇 Cookie set with same options
     res.cookie("token", token, {
       httpOnly: true,
       secure: true,

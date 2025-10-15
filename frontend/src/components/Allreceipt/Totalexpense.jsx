@@ -28,7 +28,6 @@ const Totalexpense = () => {
 
       const data = await res.json();
 
-      // ✅ Handle each type properly
       if (type === "paid") setPaid(data.totalPaid || 0);
       if (type === "unpaid") setUnpaid(data.totalUnpaid || 0);
       if (type === "pending") setPending(data.totalPending || 0);
@@ -37,7 +36,6 @@ const Totalexpense = () => {
     }
   };
 
-  // ✅ Fetch all totals when component loads
   useEffect(() => {
     fetchData("paid");
     fetchData("unpaid");
@@ -62,7 +60,6 @@ const Totalexpense = () => {
       <div className="expense">
         <h3 className="section-title">Expense Overview</h3>
 
-        {/* Filter Buttons */}
         <div className="expense-buttons">
           <button
             className={activeButton === "paid" ? "active" : ""}
